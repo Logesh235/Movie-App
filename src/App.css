@@ -1,38 +1,63 @@
+*{
+  margin: 0;
+}
 .App {
+  padding-left: 5em;
+}
+.search-bar{
   text-align: center;
+  width: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.search-bar img{
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  margin-left: 1em;
+}
+.search-bar input{
+  text-align: center;
+  height: 3em;
+  width: 30em;
+  color: black;
+  font-size: 15px;
+  border: black solid 2px;
+  border-radius: 15px;
+}
+h1{
+  text-align: center;
+  position: relative;
+  top: 1px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:rgb(255, 2, 234) ;
+}
+.movies{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-card img{
+  width: 12em;
+  height: 12em;
+  border-radius: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.year{
+  position: absolute;
+  visibility:hidden;
+  padding: 5em;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color:black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movie-card:hover .year{
+  visibility: visible;
 }
-
-.App-link {
-  color: #61dafb;
+.movie-card:hover .poster{
+  opacity: 10%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title h3{
+  font-size: 1em;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
